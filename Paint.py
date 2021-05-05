@@ -13,10 +13,14 @@ Exercises
 from turtle import *
 from freegames import vector
 
+#Start y end tienen coordenadas x,y
 def line(start, end):
     "Draw line from start to end."
+    #up marca el comienzo de la linea
     up()
+    #goto lleva el cursor a las coordenadas dadas en start
     goto(start.x, start.y)
+    #down marca el final de la linea
     down()
     goto(end.x, end.y)
 
@@ -25,10 +29,14 @@ def square(start, end):
     up()
     goto(start.x, start.y)
     down()
+    #begin_fill rellena el area entre los dados en goto
     begin_fill()
 
+    #se utiliza un ciclo for de 4 ya que el cuadrado tiene 4 esquinas/lados
     for count in range(4):
+        #forward desplaza la referncia el numero entre parentesis
         forward(end.x - start.x)
+        #left gira el número de grados dados en el ()
         left(90)
 
     end_fill()
