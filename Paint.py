@@ -9,14 +9,16 @@ Exercises
 5. Add width parameter.
 
 """
-
 import turtle as t
 from turtle import *
 from freegames import vector
 
 #Start y end tienen coordenadas x,y
 def line(start, end):
-    "Draw line from start to end."
+    """Dibuja una linea recta
+       start = punto inicial
+       end = punto final
+    """
     #up marca el comienzo de la linea
     up()
     #goto lleva el cursor a las coordenadas dadas en start
@@ -25,8 +27,12 @@ def line(start, end):
     down()
     goto(end.x, end.y)
 
+
 def square(start, end):
-    "Draw square from start to end."
+    """Dibuja un cuadrado dadas sus dos aristas
+       start = punto inicial
+       end = punto final
+    """
     up()
     goto(start.x, start.y)
     down()
@@ -41,6 +47,7 @@ def square(start, end):
         left(90)
 
     end_fill()
+
 
 def circle(start, end):
     """Dibuja un circulo con radio de (end.x - start.x)/2
@@ -59,9 +66,11 @@ def rectangle(start, end):
     "Draw rectangle from start to end."
     pass  # TODO
 
+
 def triangle(start, end):
     "Draw triangle from start to end."
     pass  # TODO
+
 
 def tap(x, y):
     "Store starting point or draw shape."
@@ -75,11 +84,14 @@ def tap(x, y):
         shape(start, end)
         state['start'] = None
 
+
 def store(key, value):
     "Store value in state at key."
     state[key] = value
 
+
 state = {'start': None, 'shape': line}
+#Se crea una pantalla de 420 x 420 en las coordenadas (370,0)
 setup(420, 420, 370, 0)
 onscreenclick(tap)
 listen()
