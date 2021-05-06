@@ -10,6 +10,7 @@ Exercises
 
 """
 
+import turtle as t
 from turtle import *
 from freegames import vector
 
@@ -43,7 +44,12 @@ def square(start, end):
 
 def circle(start, end):
     "Draw circle from start to end."
-    pass  # TODO
+    up()
+    goto(start.x, start.y)
+    down()
+    begin_fill()
+    t.circle((end.x - start.x)/2)
+    end_fill()
 
 def rectangle(start, end):
     "Draw rectangle from start to end."
@@ -74,11 +80,16 @@ setup(420, 420, 370, 0)
 onscreenclick(tap)
 listen()
 onkey(undo, 'u')
+
+#Se define la tecla asociada a cada color
 onkey(lambda: color('black'), 'K')
 onkey(lambda: color('white'), 'W')
 onkey(lambda: color('green'), 'G')
 onkey(lambda: color('blue'), 'B')
 onkey(lambda: color('red'), 'R')
+onkey(lambda: color('orange'), 'O')
+
+#Se definde la tecla asociada a las figuras
 onkey(lambda: store('shape', line), 'l')
 onkey(lambda: store('shape', square), 's')
 onkey(lambda: store('shape', circle), 'c')
