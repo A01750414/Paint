@@ -43,13 +43,17 @@ def square(start, end):
     end_fill()
 
 def circle(start, end):
-    "Draw circle from start to end."
+    """Dibuja un circulo con radio de (end.x - start.x)/2
+       start = punto inicial
+       end = punto final
+    """
     up()
     goto(start.x, start.y)
     down()
     begin_fill()
     t.circle((end.x - start.x)/2)
     end_fill()
+
 
 def rectangle(start, end):
     "Draw rectangle from start to end."
