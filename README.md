@@ -3,6 +3,6 @@ SemanaTec Actv. 1
 
 Inicialmente se dibujaban lineas y cambiabas de color.
 
-Se anadio:
-Un color nuevo
-Poder dibujar circulos, rectangulos y triangulos.
+Cambios:
+Rafa- agrego un color nuevo y poder dibujar circulos.
+Victor- Poder hacer rectangulos y triangulos.
